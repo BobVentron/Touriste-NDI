@@ -1,0 +1,115 @@
+<!-- Templates de la page d'acceuil du site Web-->
+<%inherit file="template.html"/>
+<%def name="title()">Accueil</%def>
+<%block name="body">
+<link rel="stylesheet" href="static/css/index.css">
+<link rel="stylesheet" href="/static/css/earth.css">
+<link rel="stylesheet" href="/static/css/aquarium1.css">
+<header>
+    <div class="banner">
+    </div>
+    <nav class="navbar  sticky-top navbar-expand-lg navbar-light bg-light justify-content-center sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-10" href="/index">Accueil</a>
+            <a class="navbar-brand mx-10" href="/calendar">Advent Calendar</a>
+            <a class="navbar-brand mx-10" href="/waterWeather">Water Weather</a>
+            <a class="navbar-brand mx-10" href="/butonCookie">Cookie Clicker</a>
+        </div>
+    </nav>
+</header>
+
+<div class="content">
+    <div class="container text-center text-white py-5">
+        <h1 class="font-Ocean25" style="font-size: 500%";>OCEAN BREATH</h1>
+        <p style="font-size: 150%;">Découvrez à quel point nous sommes proches de l'eau.</p>
+    </div>
+
+
+    <div class="container py-5">
+        <div class="row align-items-center">
+            <!-- Text column -->
+            <div class="col-md-8">
+                <p class="text-white" style="text-align: justify;">
+                    La principale similitude entre l'homme et la Terre réside dans leur composition en eau, ou monoxyde de dihydrogène. Le cerveau humain contient 75 % d'eau, le sang 83 %, les muscles 76 % et même les os 22 %. De son côté, la Terre est composée de 71 % d'eau, dont 96,5 % se trouve dans les océans. Cependant, cette ressource vitale est menacée par nos déchets, car nous y déversons nos ordures et tout ce qui ne peut pas être incinéré. Chaque année, entre 9 et 14 millions de tonnes de déchets plastiques finissent dans l'océan. Il est donc urgent d'agir. Nous vous invitons à en apprendre davantage sur l'eau, les océans et leur relation avec l'homme.
+                </p>
+            </div>
+            <!-- Image column -->
+            <div class="col-md-4 text-center">
+                <img src="static/images/brain.png" alt="brain" class="img-fluid" style="max-width: 50%;">
+            </div>
+        </div>
+    </div>
+
+    <!-- Section avec la Terre en 3D -->
+    <section class="earth-scene">
+        <div id="earth-container"></div>
+        <div class="earth-text" id="earth-text">
+            L’océan, pilier de la vie sur Terre, régule le climat, inspire la médecine et soutient notre bien-être. Pourtant, il est aujourd’hui menacé par la pollution, la surpêche et le réchauffement climatique, mettant en péril à la fois sa biodiversité et notre santé.
+        </div>
+    </section>
+
+    <div class="container text-center">
+        <p class="text-white" style="font-size: xx-large;">Poème l'Océan et l'homme</p>
+        <cite class="text-white" style="font-size: large; text-align: center;">
+            Océan comme Michel, Homme comme Michel<br>
+            Que des leçons comme un mag du Monde et<br>
+            Les vagues, bague du Monde, promesse brisée<br>
+            Des poissons qui passent entre elles<br><br>
+            Les horizons dansent, miroir infini<br>
+            Un théâtre mouvant où le monde se nie.<br>
+            Les abysses se tissaient mais s'abîme<br>
+            Au fond, le silence, un cri solitaire.<br>
+            Au menu : du fretin, les hommes certains<br>
+            Prennent et reprennent jusqu’à demain<br>
+            Ils bâtissent des royaumes de sable et d’orgueil<br>
+            L’océan s’effrite sous le poids de leur deuil.<br>
+            Et soudain, l’océan, soupire en cadence<br>
+            Son souffle immense, son chant de vengeance<br>
+            Un rappel, sans dédain, que nul ne retient<br>
+            Homme comme Michel, mais jusqu’à quel chemin ?
+        </cite>
+    </div>
+
+    <div class="container text-center">
+        <p class="text-white" style="font-size: xx-large; padding-top: 50px;">Podcasts : </p>
+        <p class="text-white text-center" style="font-size: large;">Découvrez comment l’océan et le corps humain sont intimement liés : des secrets fascinants sur la vie, l’énergie et l’équilibre vous attendent dans notre podcast ! 🌊✨</p>
+    </div>
+    <div class="container text-center my-4">
+        <audio controls class="my-2">
+            <source src="/static/audio/podcast1.mp3" type="audio/mpeg">
+            Votre navigateur ne prend pas en charge l'audio HTML5.
+        </audio>
+        <audio controls class="my-2">
+            <source src="/static/audio/podcast2.mp3" type="audio/mpeg">
+            Votre navigateur ne prend pas en charge l'audio HTML5.
+        </audio>
+    </div>
+    
+    
+    <div class="container text-center" style="padding-top: 50px;">
+        <p class="text-white" style="font-size: xx-large;"></p>
+        <p class="text-white" style="font-size: x-large; text-align: justify;"> L'océan c'est comme une boite de chocolat, on ne sait jamais sur quoi on va tomber, et de fait, l'Homme n'en a exploré 5% et cartographié que 24,9%. Aujourd'hui on connait mieux l'espace que nos propres planètes. Pourtant, ce n'est pas uniquement de notre faute, car la visite des profondeur de nos océans est la tâche la plus ardue qui soit, que ce soit organisme dangereux ou pression mortelle, ces explorations constituent des prises de risque considérables. Malgré tout, nous finirons bien un jour par dominer aussi bien l'immensité de la surface que les abysses ténébreuses.</p>
+        <p class="text-white" style="font-size: x-large; text-align: justify;"> Mais est-ce vraiement souhaitable ?</p>
+    </div>
+
+
+	<div class="container text-center" style="padding-top: 50px;">
+      <p class="text-white" style="font-size: xx-large; text-align: justify;">Clique sur les images, une surpise t'attend :</p>
+    </div>
+
+    <div class="aquarium1" ></div>
+    <div class="aquarium2" style="margin-top: 55vh;"></div>
+    <div class="aquarium3" style="margin-top: 110vh;"></div>
+
+    <script src="static/js/aquarium1.js" async></script>
+    <script src="static/js/aquarium2.js" async></script>
+    <script src="static/js/aquarium3.js" async></script>
+
+
+
+    <!-- Section video game -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+    <script src="/static/js/earth.js"></script>
+</div>
+</%block>

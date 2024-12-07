@@ -1,0 +1,430 @@
+<%inherit file="template.html"/>
+<%def name="title()">Calendar</%def>
+<%block name="body">
+  <link rel="stylesheet" href="/static/css/style_calendar.css">
+  <link rel="stylesheet" href="/static/css/Animation1.css">
+
+<header>
+    <div class="banner">
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center">
+      <div class="container-fluid">
+        <a class="navbar-brand mx-10" href="/index">Accueil</a>
+        <a class="navbar-brand mx-10" href="/calendar">Advent Calendar</a>
+        <a class="navbar-brand mx-10" href="/waterWeather">Water Weather</a>
+        <a class="navbar-brand mx-10" href="/butonCookie">Cookie Clicker</a>
+    </div>
+    </nav>
+</header>
+<body>
+<!-- partial:index.partial.html -->
+<!-- days sourced from: https://nationaldaycalendar.com/february/ -->
+ <div class="calendar">
+<h1>Nuit de l'info 2024</h1>
+	  <ul>
+
+		<figure class="snip1541" data-day="1" id="day-1">
+			<img style="width: 150px; height: 150px" src="/static/images/1.png" alt="sample97" />
+			<figcaption class="normale">
+        
+				<img style="width: 5rem; height: 5rem" src="/static/images/flocon.png" alt="sample97" />
+			</figcaption>
+      <figcaption class="grinch">
+        <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+      </figcaption>
+      <a href="#" onclick="openCase(1); return false;"></a>
+		</figure>
+
+      <figure class="snip1541" data-day="2">
+        <!-- Image principale -->
+        <img style="width: 150px; height: 150px" src="/static/images/2.png" alt="sample97" />
+        
+        <!-- Image du casque -->
+        <figcaption class="normale">
+          <img style="width: 7rem; height: 7rem" src="/static/images/casque.png" alt="sample97" />
+        </figcaption>
+        
+        <!-- Audio -->
+        <figcaption class="normale">
+          <audio id="audio-player" src="/static/audio/melodie_NDI.mp3"></audio>
+        </figcaption>
+
+        <figcaption class="grinch">
+          <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+        </figcaption>
+    
+        <!-- Lien cliquable -->
+        <a href="#"></a>
+      </figure>
+
+		<figure class="snip1541" data-day="3">
+		  <img style="width: 150px; height: 150px" src="/static/images/3.png" alt="sample97" />
+		  <figcaption class="normale">
+			  <img src="/static/images/poeme_ocean.png" alt="sample97" />
+		  </figcaption>
+      <figcaption class="grinch">
+        <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+      </figcaption>
+		  <a href="#"></a>
+	</figure>
+  
+  
+
+	<figure class="snip1541" data-day="4">
+	  <img style="width: 150px; height: 150px" src="/static/images/4.png" alt="sample97" />
+    <figcaption class="normale">
+      <img style="width: 7rem; height: 7rem" src="/static/images/casque.png" alt="sample97" />
+    </figcaption>
+	  <figcaption class="normale">
+		  <audio src="/static/audio/we_wish.mp3"></audio>
+	  </figcaption>
+    <figcaption class="grinch">
+      <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+    </figcaption>
+	  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="5">
+  <img style="width: 150px; height: 150px" src="/static/images/5.png" alt="sample97" />
+  <figcaption class="normale">
+	  <img style="width: 7rem; height: 7rem" src="/static/images/rb_56219.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+<figure class="snip1541" data-day="6">
+  <img style="width: 150px; height: 150px" src="/static/images/6.png" alt="sample97" />
+  <figcaption class="normale">
+	  <img style="width: 7rem; height: 7rem" src="/static/images/rb_140450.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+<figure class="snip1541" data-day="7" id="day-7">
+  <img style="width: 150px; height: 150px" src="/static/images/7.png" alt="sample97" />
+  <figcaption class="normale">
+	  <img style="width: 7rem; height: 7rem" src="/static/images/rb_1024.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+<figure class="snip1541" data-day="8">
+  <img style="width: 150px; height: 150px" src="/static/images/8.png" alt="sample97" />
+  <figcaption class="normale">
+	  <img style="width: 7rem; height: 7rem" src="/static/images/water-anime-style.jpg" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+<figure class="snip1541"data-day="9">
+  <img style="width: 150px; height: 150px" src="/static/images/9.png" alt="sample97" />
+  <figcaption class="normale">
+	  <img style="width: 7rem; height: 7rem" src="/static/images/rb_2149147297.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="10">
+  <img style="width: 150px; height: 150px" src="/static/images/10.png" alt="sample97" />
+  <figcaption class="normale">
+    <img style="width: 7rem; height: 7rem" src="/static/images/casque.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="normale">
+	  <audio src="/static/audio/bruit_mer.mp3"></audio>
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="11">
+  <img style="width: 150px; height: 150px" src="/static/images/11.png" alt="sample97" />
+  <figcaption class="normale">
+	  <img style="width: 7rem; height: 7rem" src="/static/images/rb_85570.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="12">
+  <img style="width: 150px; height: 150px" src="/static/images/12.png" alt="sample97" />
+  <figcaption class="normale">
+	  <img style="width: 7rem; height: 7rem" src="/static/images/58596754_9354182.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="13">
+  <img style="width: 150px; height: 150px" src="/static/images/13.png" alt="sample97" />
+  <figcaption class="normale">
+	  <img style="width: 7rem; height: 7rem" src="/static/images/rb_75940.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="14">
+  <img style="width: 150px; height: 150px" src="/static/images/14.png" alt="sample97" />
+  <figcaption class="normale">
+    <img style="width: 7rem; height: 7rem" src="/static/images/casque.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="normale">
+	  <audio src="/static/audio/rennes.mp3"></audio>
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="15">
+  <img style="width: 150px; height: 150px" src="/static/images/15.png" alt="sample97" />
+  <figcaption class="normale">
+    <img style="width: 7rem; height: 7rem" src="/static/images/rb_164798.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="16">
+  <img style="width: 150px; height: 150px" src="/static/images/16.png" alt="sample97" />
+  <figcaption class="normale">
+    <img style="width: 7rem; height: 7rem" src="/static/images/rb_2151236320.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="17">
+  <img style="width: 150px; height: 150px" src="/static/images/17.png" alt="sample97" />
+  <figcaption class="normale">
+    <img style="width: 7rem; height: 7rem" src="/static/images/12278690_4929869.jpg" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="18">
+  <img style="width: 150px; height: 150px" src="/static/images/18.png" alt="sample97" />
+  <figcaption class="normale">
+    <img style="width: 7rem; height: 7rem" src="/static/images/rb_7572.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="19">
+  <img style="width: 150px; height: 150px" src="/static/images/19.png" alt="sample97" />
+  <figcaption class="normale">
+    <img style="width: 10rem; height: 10rem" src="/static/images/33754149_7237060.jpg" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="20">
+  <img style="width: 150px; height: 150px" src="/static/images/20.png" alt="sample97" />
+  <figcaption class="normale">
+    <img style="width: 7rem; height: 7rem" src="/static/images/casque.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="normale">
+	  <audio src="/static/audio/hohoho.mp3"></audio>
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="21">
+  <img style="width: 150px; height: 150px" src="/static/images/21.png" alt="sample97" />
+  <figcaption class="normale">
+    <img style="width: 7rem; height: 7rem" src="/static/images/rb_28646.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="normale">
+	  <audio src="/static/audio/dolphin.mp3"></audio>
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="22">
+  <img style="width: 150px; height: 150px" src="/static/images/22.png" alt="sample97" />
+  <figcaption class="normale">
+    <img style="width: 7rem; height: 7rem" src="/static/images/rb_130.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="23">
+  <img style="width: 150px; height: 150px" src="/static/images/23.png" alt="sample97" />
+  <figcaption class="normale">
+    <img style="width: 7rem; height: 7rem" src="/static/images/sirene.png" alt="sample97" />
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#"></a>
+</figure>
+
+
+<figure class="snip1541" data-day="24">
+  <img style="width: 150px; height: 150px" src="/static/images/24.png" alt="sample97" />
+  <figcaption class="normale">
+      <img style="width: 7rem; height: 7rem" src="/static/images/casque.png" alt="sample97" />
+    </figcaption>
+  <figcaption class="normale">
+	  <audio src="/static/audio/poeme.mp3"></audio>
+  </figcaption>
+  <figcaption class="grinch">
+    <img style="width: 5rem; height: 5rem" src="/static/images/grinch.png" alt="sample97" />
+  </figcaption>
+  <a href="#" class="popup-trigger"></a>
+</figure>
+
+
+</ul>
+ <div id="popup" style="display: none;">
+  <div class="popup-content">
+    <p>Vous ne pouvez pas ouvrir cette case avant la bonne date !</p>
+    <button >OK</button>
+  </div> 
+</div>
+   
+
+  <script>
+    function initializeCalendar() {
+      const today = new Date();
+      const currentDay = today.getDate();
+    
+      // Parcourir toutes les cases du calendrier
+      document.querySelectorAll('.snip1541').forEach((figure) => {
+        const day = parseInt(figure.dataset.day, 10);
+        const link = figure.querySelector('a');
+        const audio = figure.querySelector('audio'); // On récupère l'élément audio dans chaque figure
+    
+        link.addEventListener('click', (event) => {
+          console.log('Ecouteur 3');
+          console.log('???', day, currentDay);
+    
+          if (day > currentDay) {
+            alert("Attendez le bon jour avant d'ouvrir !");
+            console.log("blublu");
+            return false;
+          }
+    
+          // Un seul parcours des éléments nécessaires
+          const allFigures = document.querySelectorAll('.snip1541');
+          const allAudio = document.querySelectorAll('.snip1541 audio');
+          const allCasque = document.querySelectorAll('.snip1541 .casque');
+          const elementsn = document.getElementsByClassName("normale");
+          const elementsg = document.getElementsByClassName("grinch");
+    
+          // Réinitialiser l'état des éléments
+          allFigures.forEach((el) => el.classList.remove('clicked'));
+          allAudio.forEach((audio) => {
+            audio.pause();
+            audio.currentTime = 0;
+          });
+          allCasque.forEach((casque) => (casque.style.display = 'none'));
+    
+          // Génère un nombre aléatoire entre 1 et 10
+          let nombreAleatoire = Math.floor(Math.random() * 10) + 1;
+          console.log("Nombre généré :", nombreAleatoire);
+    
+          if (nombreAleatoire == 10) {
+            // Affiche les éléments avec la classe "grinch" et cache ceux avec la classe "normale"
+            for (let i = 0; i < elementsg.length; i++) {
+              elementsg[i].style.display = "flex"; // Affiche le texte de chaque élément "grinch"
+            }
+            for (let i = 0; i < elementsn.length; i++) {
+              elementsn[i].style.display = "none"; // Cache les éléments "normale"
+            }
+          } else {
+            // Affiche les éléments avec la classe "normale" et cache ceux avec la classe "grinch"
+            for (let i = 0; i < elementsn.length; i++) {
+              elementsn[i].style.display = "flex"; // Affiche le texte de chaque élément "normale"
+            }
+            for (let i = 0; i < elementsg.length; i++) {
+              elementsg[i].style.display = "none"; // Cache les éléments "grinch"
+            }
+          }
+    
+          // Ajouter la classe "clicked" au bouton cliqué après un délai pour l'animation
+          setTimeout(() => {
+            figure.classList.add('clicked');
+          }, 250); // Délai de 250 millisecondes
+    
+          // Jouer l'audio
+          if (audio) {
+            audio.play(); // Joue le son de l'élément audio
+          }
+        });
+    
+        // Visuellement désactiver les jours futurs
+        if (day > currentDay) {
+          link.style.pointerEvents = "auto"; // Permet de capturer le clic mais ne fait rien
+          link.style.opacity = "0.5"; // Indique que c'est désactivé
+        }
+      });
+    }
+    
+    // Initialiser le calendrier à chaque chargement de la page
+    window.onload = initializeCalendar;
+  </script>
+  
+  </%block>
+</div>

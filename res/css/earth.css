@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+    height: 100%; /* Assure que le body prend toute la hauteur */
+}
+
+canvas {
+    display: block;
+}
+
+section {
+    height: 100vh; /* Chaque section prend toute la hauteur de la fenêtre */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+
+.earth-scene {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.earth-text {
+    position: absolute;
+    left: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    color: #ffffff;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    border-radius: 8px;
+    width: 40%; /* Limite la largeur du texte */
+    max-width: 400px; /* Largeur maximale absolue */
+    line-height: 1.6; /* Améliore l'espacement des lignes */
+    word-wrap: break-word; /* Retourne à la ligne si nécessaire */
+    overflow-wrap: break-word; /* Compatibilité avec d'autres navigateurs */
+    white-space: normal; /* Assure le retour à la ligne automatique */
+    opacity: 0; /* Texte invisible par défaut */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.earth-text.visible {
+    opacity: 1; /* Texte visible */
+    transform: translateY(-50%) translateX(0);
+}
+
+.earth-text.hidden {
+    opacity: 0; /* Texte invisible */
+    transform: translateY(-50%) translateX(-20px); /* Texte légèrement déplacé vers la gauche */
+}

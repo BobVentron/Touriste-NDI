@@ -1,0 +1,30 @@
+<!-- Templates de la page d'acceuil du site Web-->
+<%inherit file="template.html"/>
+<%def name="title()">Accueil</%def>
+<%block name="body">
+<link rel="stylesheet" href="static/css/cookie.css">
+
+<header>
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-10" href="/index">Accueil</a>
+            <a class="navbar-brand mx-10" href="/calendar">Advent Calendar</a>
+            <a class="navbar-brand mx-10" href="/waterWeather">Water Weather</a>
+            <a class="navbar-brand mx-10" href="/butonCookie">Cookie Clicker</a>
+        </div>
+    </nav>
+</header>
+
+<div class="content">
+    <div class="aquarium hidden">
+        <img src="/static/images/poisson.png" class="fish" alt="Poisson">
+      </div>
+      <div id="click-counter" class="hidden">Points: 0</div>
+      <div id="upgrade-container" class="hidden"></div>
+      <div class="play-button-container">
+        <button id="play-button">Play</button>
+      </div>
+</div>
+<script src="static/js/cookie.js"></script>
+</%block>

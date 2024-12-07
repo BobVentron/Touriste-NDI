@@ -1,0 +1,44 @@
+<%inherit file="template.html"/>
+<%def name="title()">Water Weather - Météo Maritime</%def>
+<%block name="body">
+<link rel="stylesheet" href="static/css/weather.css">
+<header>
+    <div class="banner">
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light justify-content-center sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand mx-10" href="/index">Accueil</a>
+            <a class="navbar-brand mx-10" href="/calendar">Advent Calendar</a>
+            <a class="navbar-brand mx-10" href="/waterWeather">Water Weather</a>
+            <a class="navbar-brand mx-10" href="/butonCookie">Cookie Clicker</a>
+        </div>
+    </nav>
+</header>
+
+    <div class="weatherContent">
+        <h1 style="margin-top: 50px;">🌊 Water Weather - Météo Maritime</h1>
+    <form method="POST" action="/waterWeather">
+        <input type="text" name="port" placeholder="Entrez un port ou une ville côtière" required>
+        <button type="submit">Rechercher</button>
+    </form>
+
+    % if error_message:
+        <div class="error">${error_message}</div>
+    % elif weather_data:
+        <div class="weather">
+            <h2>Météo à ${weather_data['name']}, ${weather_data['sys']['country']}</h2>
+            <!-- Affichage de l'icône météo -->
+            <img src="${weather_data['icon_url']}" 
+                 alt="${weather_data['weather'][0]['description']}" 
+                 class="weather-icon">
+            <p><strong>Condition :</strong> ${weather_data['weather'][0]['description'].capitalize()}</p>
+            <p><strong>Température :</strong> ${weather_data['main']['temp']}°C</p>
+            <p><strong>Ressenti :</strong> ${weather_data['main']['feels_like']}°C</p>
+            <p><strong>Humidité :</strong> ${weather_data['main']['humidity']}%</p>
+            <p><strong>Vitesse du vent :</strong> ${weather_data['wind']['speed']} m/s</p>
+        </div>
+    % endif
+
+    
+</%block>
+</div>

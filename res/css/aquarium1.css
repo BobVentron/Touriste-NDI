@@ -1,0 +1,67 @@
+.aquarium1 {
+    width: auto;
+    height: 10vh;
+    z-index: 2;
+}
+
+.fish {
+    position: absolute;
+    width: 100px;
+    cursor: pointer;
+    transition: transform 4s ease-in-out, rotate 4s linear; /* Mouvement fluide et plus lent */
+}
+
+.fish.hidden {
+    display: none; /* Cache le poisson lorsqu'il est cliqué */
+}
+
+/* Styles du message */
+.message-box {
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: large;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%; /* Prend 60% de la largeur de la page */
+    max-width: 600px; /* Limite la largeur maximale */
+}
+
+.message-content {
+    flex: 1;
+    padding: 5px;
+}
+
+.message-image {
+    flex: 1;
+    width: 200%; 
+}
+
+.message-image img {
+    width: 200%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.close-button:hover {
+    color: red;
+}

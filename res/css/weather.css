@@ -1,0 +1,123 @@
+/* Style général */
+.weatherContent {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #5464BF , #0C307C);
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Titre principal */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #FFFAFA;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* Formulaire */
+form {
+    margin-bottom: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 250px;
+    max-width: 80%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #003f7f;
+    transform: scale(1.05);
+}
+
+/* Section météo */
+.weather {
+    margin-top: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+    width: 90%;
+    animation: fadeIn 1s ease-in-out;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.weather h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #FFFAFA;
+}
+
+.weather p {
+    font-size: 1.2em;
+    line-height: 1.5;
+}
+
+/* Icône météo */
+.weather-icon {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 0 auto 10px;
+}
+
+/* Erreur */
+.error {
+    color: #FF6347;
+    font-weight: bold;
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.navbar-brand {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.navbar-brand:first-child {
+    margin-left: 15%; /* Ajustez cette valeur selon vos besoins */
+}
+
+.navbar-brand:last-child {
+    margin-right: 15%; /* Ajustez cette valeur selon vos besoins */
+}
+
