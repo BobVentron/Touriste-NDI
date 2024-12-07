@@ -45,8 +45,7 @@ Notre projet a été conçu par une équipe de **sept développeurs**, étudiant
 
 ## **Accéder au projet**  
 Le projet est hébergé en ligne et accessible à cette adresse :  
-[Accéder au site](#touriste-ndi.soleihb.fr)  
-(*Remplacez `#lien-site` par l’URL finale du site.*)  
+[Accéder au site](touriste-ndi.soleihb.fr)  
 
 ---
 
